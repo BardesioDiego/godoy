@@ -2108,7 +2108,7 @@ section,
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: #90e635;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2118,12 +2118,12 @@ section,
 
 .featured-services .service-icon-wrapper i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: #68a32a;
   transition: all 0.3s ease;
 }
 
 .service-item:hover .featured-services .service-icon-wrapper {
-  background: var(--accent-color);
+  background: #68a32a;
   transform: scale(1.1);
 }
 
@@ -2967,8 +2967,9 @@ section,
   text-align: center;
   padding: 1.5rem;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  background: #68a32a;
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .about .stats-grid .stat-item:hover {
@@ -2979,13 +2980,13 @@ section,
   display: block;
   font-size: 2.5rem;
   font-weight: 300;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   margin-bottom: 0.5rem;
 }
 
 .about .stats-grid .stat-item .stat-label {
   font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #ffffff;
   font-weight: 500;
 }
 
