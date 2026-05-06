@@ -912,7 +912,6 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -3028,7 +3027,15 @@ section,
 }
 
 .about .values-section {
-  margin-top: 120px;
+  margin-top: 10px;
+  margin-bottom: 80px; /* Ajusta este valor según el espacio que desees */
+}
+
+/* Opcional: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about .values-section {
+    margin-bottom: 50px;
+  }
 }
 
 .about .values-section h3 {
@@ -3230,10 +3237,10 @@ section,
 }
 
 .departments-tabs .specialty-navigation .department-tab {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: #083839;
   border: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 2rem 1.5rem;
@@ -3258,13 +3265,13 @@ section,
 }
 
 .departments-tabs .specialty-navigation .department-tab:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+  background-color: #68a32a;
   color: var(--contrast-color);
   transform: translateY(-2px);
 }
 
 .departments-tabs .specialty-navigation .department-tab.active {
-  background-color: var(--accent-color);
+  background-color: #68a32a;
   color: var(--contrast-color);
 }
 
@@ -3278,7 +3285,7 @@ section,
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid var(--accent-color);
+  border-top: 12px solid #68a32a;
 }
 
 @media (max-width: 768px) {
@@ -3376,7 +3383,7 @@ section,
 }
 
 .departments-tabs .service-icon {
-  background-color: var(--accent-color);
+  background-color: #68a32a;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -3421,6 +3428,17 @@ section,
   opacity: 1;
   transform: translateY(0);
 }
+
+.department-title-seccion {
+    color: #00332c; /* Verde oscuro institucional */
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif; /* O la fuente que uses en tu proyecto */
+}
+
 
 /*--------------------------------------------------------------
 # Departments Section
