@@ -3297,7 +3297,7 @@ section,
 }
 
 .about .values-section .value-item:hover .value-icon {
-  background: var(--accent-color);
+  background: #426424;
   transform: scale(1.1);
 }
 
