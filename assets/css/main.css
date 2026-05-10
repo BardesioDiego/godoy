@@ -381,12 +381,36 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
     cursor: pointer;
-    transition: color 0.3s;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--nav-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .mobile-nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   .navmenu {
@@ -448,7 +472,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: #68a32a;
   }
 
   .navmenu .active i,
@@ -482,13 +506,15 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
     position: absolute;
-    font-size: 32px;
     top: 15px;
     right: 15px;
     margin-right: 0;
     z-index: 9999;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle span {
+    background-color: #fff;
   }
 
   .mobile-nav-active .navmenu {
@@ -861,7 +887,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #68a32a;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -875,7 +901,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, #68a32a, transparent 20%);
   color: var(--contrast-color);
 }
 
@@ -1602,7 +1628,7 @@ section,
 
 .home-about .about-content .cta-section .btn-primary {
   background-color: #68a32a;
-  color: var(--contrast-color);
+  color: #ffffff;
   padding: 12px 30px;
   font-size: 1rem;
   font-weight: 400;
@@ -1612,9 +1638,9 @@ section,
 }
 
 .home-about .about-content .cta-section .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: #426424;
   transform: translateY(-2px);
-  color: var(--contrast-color);
+  color: #ffffff;
 }
 
 .home-about .about-content .cta-section .btn-secondary {
@@ -1635,6 +1661,15 @@ section,
 .home-about .about-content .cta-section .btn-secondary:hover {
   color: var(--accent-color);
   transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .home-about .about-content .cta-section {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    width: 100%;            /* Asegura que ocupe todo el ancho para poder centrar */
+    margin-top: 20px;       /* Espacio opcional arriba */
+  }
 }
 
 .home-about .about-visual {
@@ -1727,11 +1762,7 @@ section,
 
 @media (max-width: 768px) {
   .home-about .about-visual .experience-badge {
-    position: static;
-    margin-bottom: 2rem;
-    right: auto;
-    top: auto;
-    display: inline-block;
+    display: none !important;
   }
 }
 
@@ -1981,34 +2012,72 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-.featured-departments .emergency-banner {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #667eea 30%));
+.about .emergency-banner {
+  background-color: #151b29;
   border-radius: 20px;
-  padding: 40px;
-  margin-top: 60px;
-  color: var(--contrast-color);
+  /* REDUCIMOS EL PADDING: 25px arriba/abajo y 40px a los lados */
+  padding: 25px 40px; 
+  margin: 40px auto;
+  /* REDUCIMOS EL ANCHO MÁXIMO para que no se vea tan estirado hacia los lados */
+  max-width: 850px; 
+  width: 90%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.featured-departments .emergency-banner h3 {
-  color: var(--contrast-color);
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 10px;
+.about .emergency-banner h3 {
+  color: #ffffff;
+  /* Tamaño de fuente más contenido */
+  font-size: 20px; 
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 550px; /* Evita que el texto toque el botón */
 }
 
-.featured-departments .emergency-banner p {
-  color: color-mix(in srgb, var(--contrast-color), transparent 15%);
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 0;
+.about .emergency-banner .btn-info {
+  background-color: #6fb033;
+  color: white;
+  /* Botón un poco más compacto */
+  padding: 10px 25px; 
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio para el icono de WhatsApp si lo pones */
+  transition: transform 0.2s ease;
 }
 
-.featured-departments .emergency-btn {
+.about .emergency-banner .btn-info:hover {
+  transform: scale(1.05);
+  background-color: #5d942a;
+}
+
+/* Para que en tablets y móviles no se rompa */
+@media (max-width: 768px) {
+  .about .emergency-banner {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+  .about .emergency-banner h3 {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.about .emergency-btn {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--contrast-color);
-  color: var(--accent-color);
+  background: #68a32a;
+  color: #ffffff;
   padding: 16px 30px;
   border-radius: 50px;
   text-decoration: none;
@@ -2017,66 +2086,66 @@ section,
   transition: all 0.3s ease;
 }
 
-.featured-departments .emergency-btn:hover {
-  background: color-mix(in srgb, var(--contrast-color), transparent 10%);
+.about .emergency-btn:hover {
+  background: #88d634;
   transform: translateY(-2px);
-  color: var(--accent-color);
+  color: #ffffff;
 }
 
-.featured-departments .emergency-btn i {
+.about .emergency-btn i {
   font-size: 18px;
 }
 
 @media (max-width: 992px) {
-  .featured-departments .specialty-card {
+  .about .specialty-card {
     flex-direction: column;
   }
 
-  .featured-departments .specialty-visual {
+  .about .specialty-visual {
     height: 200px;
     order: -1;
   }
 }
 
 @media (max-width: 768px) {
-  .featured-departments .specialty-content {
+  .about .specialty-content {
     padding: 30px 25px;
   }
 
-  .featured-departments h3 {
+  .about h3 {
     font-size: 24px;
   }
 
-  .featured-departments .department-highlight {
+  .about .department-highlight {
     padding: 30px 20px;
     text-align: center;
   }
 
-  .featured-departments .highlight-icon {
+  .about .highlight-icon {
     width: 60px;
     height: 60px;
     margin-bottom: 20px;
   }
 
-  .featured-departments .highlight-icon i {
+  .about .highlight-icon i {
     font-size: 24px;
   }
 
-  .featured-departments h4 {
+  .about h4 {
     font-size: 20px;
   }
 
-  .featured-departments .emergency-banner {
+  .about .emergency-banner {
     padding: 30px 25px;
     text-align: center;
   }
 
-  .featured-departments .emergency-banner h3 {
+  .about .emergency-banner h3 {
     font-size: 24px;
     margin-bottom: 15px;
   }
 
-  .featured-departments .emergency-banner .emergency-btn {
+  .about .emergency-banner .emergency-btn {
     margin-top: 20px;
     padding: 14px 25px;
     font-size: 15px;
@@ -3185,6 +3254,7 @@ section,
   position: relative;
 }
 
+/* Mantenemos tus estilos base para desktop */
 .about .image-wrapper .main-image {
   border-radius: 12px;
   box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
@@ -3199,6 +3269,31 @@ section,
   object-fit: cover;
 }
 
+/* AJUSTE PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  .about .image-wrapper .main-image {
+    /* Centrado horizontal automático */
+    margin: 20px auto; 
+    
+    /* Bajamos la altura para que no se vea tan alargada */
+    height: 300px; 
+    
+    /* Controlamos el ancho para que respire a los lados y esté centrado */
+    width: 90%; 
+    
+    /* Aseguramos que sea un bloque para que el 'auto' funcione */
+    display: block; 
+    
+    /* Mantenemos el redondeado */
+    border-radius: 12px;
+  }
+
+  .about .image-wrapper .main-image img {
+    /* Tu object-fit ya hace el trabajo sucio aquí */
+    object-fit: cover;
+    object-position: center; /* Esto asegura que el centro de la foto sea el protagonista */
+  }
+}
 .about .image-wrapper .floating-image {
   position: absolute;
   bottom: -30px;
@@ -6600,6 +6695,7 @@ section,
 .rounded-image {
   border-radius: 40px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  margin-top: 10px;
 }
 
 /* Colores y Títulos */
