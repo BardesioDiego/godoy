@@ -135,6 +135,20 @@ h6 {
   }
 }
 
+.logo img {
+  max-height: 150px; /* Ajusta este valor según el alto de tu menú */
+  width: auto;      /* Mantiene la proporción original */
+  margin-right: 1px; /* Espacio si decides dejar texto al lado */
+  display: block;
+}
+
+/* Ajuste para móviles si el logo se ve muy pequeño */
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 35px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -1403,6 +1417,51 @@ section,
 /*--------------------------------------------------------------
 # Home About Section
 --------------------------------------------------------------*/
+
+#home-about {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  color: #ffffff; /* Asegura que el texto sea blanco */
+  margin-top: 40px;
+}
+
+/* Estilo para la imagen de fondo */
+.about-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* La envía al fondo */
+}
+
+/* Capa oscura (Overlay) para mejorar la lectura del texto */
+#home-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Ajusta el 0.6 para más o menos oscuridad */
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+#home-about .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Opcional: Ajuste para el encabezado si no resalta */
+.section-heading {
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 .home-about {
   padding: 100px 0;
   background-color: var(--surface-color);
