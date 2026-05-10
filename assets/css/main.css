@@ -3428,6 +3428,13 @@ section,
   justify-content: center;
 }
 
+/* Solo afecta a la imagen con esta clase */
+.departments-tabs .department-image img.img-desplazada {
+  object-position: 100% center !important; /* Ajusta el % hasta ver lo que quieres */
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 992px) {
   .departments-tabs .department-info {
     height: auto;
@@ -3602,9 +3609,9 @@ section,
 
 .departments .department-content h3 {
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 15px;
-  color: var(--heading-color);
+  color: #767578;
   font-family: var(--heading-font);
   line-height: 1.3;
 }
