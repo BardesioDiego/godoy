@@ -617,6 +617,8 @@ h6 {
 }
 
 .footer-16 .nav-column .footer-nav a {
+  display: inline-flex;
+  align-items: center;
   color: #151a28;
   text-decoration: none;
   font-size: 15px;
