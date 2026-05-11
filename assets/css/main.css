@@ -9,7 +9,7 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
+  --heading-font: "Roboto",  sans-serif;
   --nav-font: "Lato",  sans-serif;
 }
 
@@ -560,7 +560,7 @@ h6 {
 .footer-16 .brand-section .brand-description {
   font-size: 18px;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: #151a28;
   font-weight: 300;
   max-width: 380px;
   margin: 0;
@@ -617,7 +617,7 @@ h6 {
 }
 
 .footer-16 .nav-column .footer-nav a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #151a28;
   text-decoration: none;
   font-size: 15px;
   font-weight: 300;
@@ -714,7 +714,7 @@ h6 {
 .footer-16 .footer-bottom .copyright p {
   margin: 0;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 45%);
+  color: #151a28;
   font-weight: 300;
 }
 
@@ -2232,7 +2232,7 @@ section,
 .featured-services .service-details p {
   font-size: 16px;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: #151a28;
   margin-bottom: 32px;
 }
 
@@ -2341,7 +2341,7 @@ section,
 .featured-services .service-info p {
   font-size: 14px;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #151a28;
   margin-bottom: 12px;
 }
 
@@ -3151,7 +3151,7 @@ section,
 .about .about-content p.lead {
   font-size: 1.25rem;
   font-weight: 300;
-  color: #083839;
+  color: #151a28;
   margin-bottom: 2rem;
   line-height: 1.7;
 }
@@ -3160,7 +3160,7 @@ section,
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 3rem;
-  color: #083839;
+  color: #151a28;
 }
 
 .about .stats-grid {
@@ -3671,7 +3671,7 @@ section,
 }
 
 .departments-tabs .department-description {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #151a28;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -3721,7 +3721,7 @@ section,
 }
 
 .departments-tabs .service-content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #151a28;
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0;
