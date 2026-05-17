@@ -2043,6 +2043,39 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.btn-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #689f38; /* El verde manzana de la captura */
+  color: #ffffff !important; /* Texto e icono en blanco */
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px; /* Esquinas completamente redondeadas en forma de píldora */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px; /* Espaciado respecto al texto del PDF */
+}
+
+/* El icono de "Play" (usando Bootstrap Icons) */
+.btn-video i {
+  font-size: 18px;
+  margin-right: 8px; /* Separa el triángulo del texto */
+  line-height: 1;
+}
+
+/* El texto subrayado como se ve en tu referencia */
+.btn-video span {
+  text-decoration: underline;
+}
+
+/* Efecto Hover (al pasar el mouse por encima) */
+.btn-video:hover {
+  background-color: #558b2f; /* Un verde ligeramente más oscuro al interactuar */
+  transform: translateY(-2px); /* Pequeño salto hacia arriba */
+}
+
 .about .emergency-banner {
   background-color: #151b29;
   border-radius: 20px;
