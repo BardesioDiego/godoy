@@ -3710,7 +3710,7 @@ section,
 
 /* Solo afecta a la imagen con esta clase */
 .departments-tabs .department-image img.img-desplazada {
-  object-position: 100% center !important; /* Ajusta el % hasta ver lo que quieres */
+  object-position: 42% center !important; /* Ajusta el % hasta ver lo que quieres */
   width: 100%;
   height: 100%;
 }
@@ -6864,4 +6864,38 @@ section,
   align-items: center;
   justify-content: center;
   animation: pulse 1.5s infinite;
+}
+
+/* Carrusel flechas minimalistas */
+#carouselSecadoras .carousel-control-prev,
+#carouselSecadoras .carousel-control-next {
+  width: 5%;
+  opacity: 1;
+}
+
+#carouselSecadoras .carousel-control-prev-icon,
+#carouselSecadoras .carousel-control-next-icon {
+  background-image: none; /* elimina el icono default */
+  width: 35px;
+  height: 35px;
+}
+
+#carouselSecadoras .carousel-control-prev-icon::after {
+  content: "‹";
+  font-size: 45px;
+  font-weight: 300;
+  color: #000; /* cambia el color */
+}
+
+#carouselSecadoras .carousel-control-next-icon::after {
+  content: "›";
+  font-size: 45px;
+  font-weight: 300;
+  color: #000; /* cambia el color */
+}
+
+/* sin fondo */
+#carouselSecadoras .carousel-control-prev,
+#carouselSecadoras .carousel-control-next {
+  background: none;
 }
