@@ -6715,6 +6715,24 @@ section,
   margin-bottom: 40px;
 }
 
+/* MOBILE */
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+    font-size: 15px;
+    border-radius: 40px;
+  }
+}
+
 .btn-get-started {
   background-color: #72b02e; /* Verde Godoy */
   color: white;
@@ -6898,4 +6916,16 @@ section,
 #carouselSecadoras .carousel-control-prev,
 #carouselSecadoras .carousel-control-next {
   background: none;
+}
+
+@media (max-width: 991px) {
+  .img-move-up {
+    transform: translateY(-45px);
+  }
+}
+
+@media (max-width: 991px) {
+  .img-move-up-agro {
+    transform: translateY(-25px);
+  }
 }
