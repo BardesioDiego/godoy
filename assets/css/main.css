@@ -6664,8 +6664,7 @@ section,
   /* 'object-fit' es vital para que no se deforme */
   object-fit: cover;
   /* Bajamos la opacidad directamente aquí si no quieres usar el ::before */
-  opacity: 0.4; 
-  /* Un z-index negativo para que se vaya al fondo del todo */
+
   z-index: -1;
   /* Elimina cualquier margen que traiga por defecto */
   margin: 0;
